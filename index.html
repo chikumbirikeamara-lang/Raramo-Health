@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raramo Health | A Better Journey Through Pregnancy</title>
+
+<meta name="description" content="Raramo Health is being developed as a digital maternal health platform designed to support women throughout pregnancy and beyond through personalised guidance, AI-enabled support and healthcare navigation.">
+
+<meta name="theme-color" content="#426b59">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =================================
+   1. BRAND IDENTITY
+================================= */
+
+:root {
+    --green: #426b59;
+    --dark-green: #254b3b;
+    --light-green: #e8f0e9;
+    --sage: #a9c2ad;
+    --cream: #faf8f2;
+    --pink: #e9c7c0;
+    --terracotta: #b97866;
+    --dark: #27342d;
+    --grey: #68746d;
+    --white: #ffffff;
+    --border: #e5e9e3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 95px 0;
+}
+
+.section-label {
+    color: var(--terracotta);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: clamp(32px, 5vw, 46px);
+    color: var(--dark-green);
+    margin-bottom: 20px;
+}
+
+.section-description {
+    color: var(--grey);
+    max-width: 650px;
+    font-size: 16px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center .section-description {
+    margin: auto;
+}
+
+/* =================================
+   2. NAVIGATION
+================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.nav-inner {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.logo-symbol {
+    width: 43px;
+    height: 43px;
+    background: var(--green);
+    border-radius: 50% 50% 50% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark-green);
+    letter-spacing: -1px;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: var(--grey);
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--terracotta);
+}
+
+.nav-cta {
+    background: var(--green);
+    color: white !important;
+    padding: 12px 19px;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--dark-green);
+    cursor: pointer;
+}
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    background: var(--cream);
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+    padding: 75px 0;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: var(--light-green);
+    color: var(--dark-green);
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(43px, 6vw, 68px);
+    color: var(--dark-green);
+    margin-bottom: 25px;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    color: var(--terracotta);
+    font-style: italic;
+}
+
+.hero-text {
+    font-size: 17px;
+    color: var(--grey);
+    max-width: 530px;
+    margin-bottom: 32px;
+}
+
+.button-group {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid var(--green);
+    color: var(--dark-green);
+}
+
+.btn-outline:hover {
+    background: var(--light-green);
+}
+
+.hero-image {
+    min-height: 430px;
+    background: linear-gradient(145deg, #dce9dc, #e9d7ce);
+    border-radius: 180px 180px 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.hero-image-placeholder {
+    text-align: center;
+    color: var(--dark-green);
+    padding: 30px;
+}
+
+.hero-image-placeholder .icon {
+    font-size: 90px;
+}
+
+.hero-image-placeholder p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* =================================
+   4. INTRODUCTION
+================================= */
+
+.intro {
+    background: white;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.intro-mark {
+    background: var(--light-green);
+    border-radius: 12px;
+    min-height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px;
+}
+
+.intro-mark h3 {
+    font-size: 34px;
+    color: var(--dark-green);
+}
+
+.intro-mark p {
+    color: var(--grey);
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.intro-content p {
+    color: var(--grey);
+    margin-bottom: 18px;
+}
+
+/* =================================
+   5. THE PROBLEM
+================================= */
+
+.problem {
+    background: var(--cream);
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 50px;
+}
+
+.problem-card {
+    background: white;
+    padding: 32px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.problem-card h3 {
+    font-size: 22px;
+    color: var(--dark-green);
+    margin-bottom: 13px;
+}
+
+.problem-card p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+/* =================================
+   6. OUR SOLUTION
+================================= */
+
+.solution {
+    background: white;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.solution-content p {
+    color: var(--grey);
+    margin-bottom: 20px;
+}
+
+.solution-visual {
+    background: var(--light-green);
+    padding: 45px;
+    border-radius: 12px;
+}
+
+.solution-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 27px;
+}
+
+.solution-item:last-child {
+    margin-bottom: 0;
+}
+
+.solution-number {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.solution-item h4 {
+    color: var(--dark-green);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.solution-item p {
+    font-size: 13px;
+    color: var(--grey);
+}
+
+/* =================================
+   7. FEATURES
+================================= */
+
+.features {
+    background: var(--cream);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 48px;
+}
+
+.feature-card {
+    background: white;
+    padding: 32px 27px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(30,60,40,0.07);
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    background: var(--light-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.feature-card h3 {
+    font-size: 21px;
+    color: var(--dark-green);
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+/* =================================
+   8. AI SECTION
+================================= */
+
+.ai-section {
+    background: var(--dark-green);
+    color: white;
+    overflow: hidden;
+}
+
+.ai-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.ai-section .section-label {
+    color: var(--pink);
+}
+
+.ai-section .section-title {
+    color: white;
+}
+
+.ai-section .section-description {
+    color: #d4e1d8;
+}
+
+.ai-points {
+    margin-top: 30px;
+}
+
+.ai-point {
+    margin-bottom: 17px;
+    display: flex;
+    gap: 12px;
+    color: #e6eee8;
+    font-size: 14px;
+}
+
+.ai-point span {
+    color: var(--pink);
+    font-weight: 700;
+}
+
+.ai-demo {
+    background: white;
+    border-radius: 15px;
+    padding: 28px;
+    color: var(--dark);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.ai-demo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+}
+
+.ai-avatar {
+    background: var(--light-green);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.ai-demo-header h3 {
+    font-size: 17px;
+    color: var(--dark-green);
+}
+
+.ai-demo-header p {
+    font-size: 11px;
+    color: var(--grey);
+}
+
+.chat-message {
+    padding: 15px;
+    background: var(--light-green);
+    border-radius: 10px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: var(--dark-green);
+}
+
+.chat-input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin: 10px 0;
+    font-family: inherit;
+}
+
+.chat-button {
+    width: 100%;
+    background: var(--green);
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ai-disclaimer {
+    color: var(--grey);
+    font-size: 10px;
+    margin-top: 13px;
+}
+
+/* =================================
+   9. REFERRAL SYSTEM
+================================= */
+
+.referral {
+    background: white;
+}
+
+.referral-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.referral-box {
+    background: var(--cream);
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.referral-step {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.referral-step:last-child {
+    margin-bottom: 0;
+}
+
+.referral-step .number {
+    background: var(--pink);
+    color: var(--dark-green);
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.referral-step h4 {
+    color: var(--dark-green);
+    font-size: 18px;
+}
+
+.referral-step p {
+    color: var(--grey);
+    font-size: 13px;
+}
+
+.referral-content p {
+    color: var(--grey);
+    margin-bottom: 18px;
+}
+
+/* =================================
+   10. PREGNANCY JOURNEY
+================================= */
+
+.journey {
+    background: var(--cream);
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 45px;
+}
+
+.journey-card {
+    padding: 35px 28px;
+    background: white;
+    border-radius: 10px;
+    border-top: 4px solid var(--sage);
+}
+
+.journey-card h3 {
+    color: var(--dark-green);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.journey-card p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+/* =================================
+   11. OUR VISION
+================================= */
+
+.vision {
+    background: var(--light-green);
+    text-align: center;
+}
+
+.vision h2 {
+    max-width: 800px;
+    margin: 0 auto 25px;
+    font-size: clamp(34px, 5vw, 48px);
+    color: var(--dark-green);
+}
+
+.vision p {
+    max-width: 720px;
+    margin: auto;
+    color: var(--grey);
+    font-size: 16px;
+}
+
+/* =================================
+   12. FOUNDER
+================================= */
+
+.founder {
+    background: white;
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.founder-photo {
+    background: var(--light-green);
+    min-height: 450px;
+    border-radius: 150px 150px 10px 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-photo img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.founder-placeholder {
+    text-align: center;
+    color: var(--dark-green);
+    padding: 25px;
+}
+
+.founder-placeholder span {
+    font-size: 70px;
+}
+
+.founder-placeholder p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.founder-content p {
+    color: var(--grey);
+    margin-bottom: 17px;
+    font-size: 14px;
+}
+
+.founder-name {
+    font-size: 30px;
+    color: var(--dark-green);
+    margin-bottom: 7px;
+}
+
+.founder-role {
+    color: var(--terracotta);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+
+/* =================================
+   13. PARTNERSHIPS
+================================= */
+
+.partners {
+    background: var(--cream);
+    text-align: center;
+}
+
+.partner-box {
+    max-width: 750px;
+    margin: 35px auto 0;
+}
+
+.partner-box p {
+    color: var(--grey);
+    margin-bottom: 25px;
+}
+
+/* =================================
+   14. CONTACT
+================================= */
+
+.contact {
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    margin-top: 40px;
+}
+
+.contact-info p {
+    color: var(--grey);
+    margin-bottom: 20px;
+}
+
+.contact-detail {
+    margin-top: 25px;
+    color: var(--dark-green);
+    font-weight: 600;
+}
+
+.contact-form {
+    background: var(--cream);
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+}
+
+/* =================================
+   15. FOOTER
+================================= */
+
+.footer {
+    background: var(--dark-green);
+    color: white;
+    padding: 55px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 45px;
+    margin-bottom: 40px;
+}
+
+.footer h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer h4 {
+    font-size: 17px;
+    margin-bottom: 17px;
+}
+
+.footer p,
+.footer a {
+    color: #d3e0d7;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer a:hover {
+    color: var(--pink);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 22px;
+    text-align: center;
+    color: #d3e0d7;
+    font-size: 12px;
+}
+
+/* =================================
+   16. RESPONSIVE DESIGN
+================================= */
+
+@media(max-width: 850px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-grid,
+    .intro-grid,
+    .solution-grid,
+    .ai-grid,
+    .referral-grid,
+    .founder-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-grid {
+        gap: 35px;
+    }
+
+    .hero-image {
+        min-height: 350px;
+    }
+
+    .problem-grid,
+    .features-grid,
+    .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .founder-photo {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 550px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .problem-grid,
+    .features-grid,
+    .journey-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .btn {
+        text-align: center;
+    }
+
+    .solution-visual,
+    .referral-box,
+    .contact-form {
+        padding: 25px;
+    }
+
+    .founder-photo,
+    .founder-photo img {
+        min-height: 350px;
+        height: 350px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+<div class="container nav-inner">
+
+<a href="#home" class="logo">
+
+<div class="logo-symbol">R</div>
+
+<div class="logo-text">
+RAR​​AMO
+<span>HEALTH</span>
+</div>
+
+</a>
+
+<button class="menu-toggle" id="menuToggle"
+aria-label="Open navigation menu">☰</button>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#solution">Our Solution</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#founder">Founder</a></li>
+<li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="hero-tag">
+REIMAGINING MATERNAL HEALTH
+</div>
+
+<h1>
+Pregnancy deserves a <span>better journey.</span>
+</h1>
+
+<p class="hero-text">
+
+A more informed, connected and supported pregnancy experience.
+
+Raramo Health is being developed as a digital maternal health platform helping women navigate pregnancy and beyond through personalised guidance, intelligent support and connections to healthcare services.
+
+</p>
+
+<div class="button-group">
+
+<a href="#solution" class="btn btn-primary">
+Discover Raramo
+</a>
+
+<a href="#about" class="btn btn-outline">
+Our Story
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<div class="hero-image-placeholder">
+
+<div class="icon">🤰🏽</div>
+
+<p>Every pregnancy deserves informed and compassionate support.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- INTRODUCTION -->
+
+<section class="section intro" id="about">
+
+<div class="container intro-grid">
+
+<div class="intro-mark">
+
+<div>
+
+<h3>Raramo</h3>
+
+<p>
+A name rooted in the idea of life, wellbeing and the ability to thrive.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="intro-content">
+
+<div class="section-label">ABOUT RARAMO HEALTH</div>
+
+<h2 class="section-title">
+Supporting women beyond the pregnancy test.
+</h2>
+
+<p>
+
+Pregnancy is one of the most significant experiences in a woman's life. Yet navigating it can be overwhelming, particularly when reliable information, timely guidance and access to healthcare services are difficult to obtain.
+
+</p>
+
+<p>
+
+Raramo Health is an emerging digital health initiative being developed to make maternal health information more accessible, understandable and actionable.
+
+</p>
+
+<p>
+
+Our vision is to create a digital companion that supports women throughout their maternal journey, from early pregnancy through childbirth and the postpartum period.
+
+</p>
+
+<p>
+
+We believe that women should not have to navigate pregnancy alone or wait until a health concern becomes an emergency before knowing where to seek help.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- THE PROBLEM -->
+
+<section class="section problem">
+
+<div class="container">
+
+<div class="center">
+
+<div class="section-label">THE CHALLENGE</div>
+
+<h2 class="section-title">
+Pregnancy is a journey. Navigating it shouldn't be a struggle.
+</h2>
+
+<p class="section-description">
+
+For many women, particularly in resource-constrained settings, the journey through pregnancy comes with challenges that extend beyond clinical care.
+
+</p>
+
+</div>
+
+
+<div class="problem-grid">
+
+<div class="problem-card">
+
+<div class="card-icon">📚</div>
+
+<h3>Information Gaps</h3>
+
+<p>
+
+Women may struggle to find reliable, understandable and relevant information about pregnancy, maternal health and potential complications.
+
+</p>
+
+</div>
+
+
+<div class="problem-card">
+
+<div class="card-icon">⏰</div>
+
+<h3>Delayed Recognition</h3>
+
+<p>
+
+Limited awareness of maternal danger signs can make it difficult for women and their families to recognise when urgent medical attention is needed.
+
+</p>
+
+</div>
+
+
+<div class="problem-card">
+
+<div class="card-icon">🏥</div>
+
+<h3>Disconnected Care</h3>
+
+<p>
+
+Knowing when to seek help is only part of the challenge. Identifying appropriate healthcare facilities and navigating referrals can also be difficult.
+
+</p>
+
+</div>
+
+
+<div class="problem-card">
+
+<div class="card-icon">💬</div>
+
+<h3>Limited Continuous Support</h3>
+
+<p>
+
+Pregnancy brings new questions and concerns at every stage. Women need support that extends beyond occasional clinic visits.
+
+</p>
+
+</div>
+
+
+<div class="problem-card">
+
+<div class="card-icon">🌍</div>
+
+<h3>Access Inequalities</h3>
+
+<p>
+
+Geographical barriers, limited resources and differences in health literacy can affect women's ability to access maternal health information and services.
+
+</p>
+
+</div>
+
+
+<div class="problem-card">
+
+<div class="card-icon">❤️</div>
+
+<h3>The Postpartum Gap</h3>
+
+<p>
+
+Maternal support should not end at delivery. The postpartum period also requires information, follow-up and support for mothers.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OUR SOLUTION -->
+
+<section class="section solution" id="solution">
+
+<div class="container">
+
+<div class="section-label">OUR APPROACH</div>
+
+<h2 class="section-title">
+One digital companion. A more connected maternal health journey.
+</h2>
+
+<div class="solution-grid">
+
+<div class="solution-content">
+
+<p>
+
+Raramo Health aims to bring essential elements of maternal health support into one accessible digital experience.
+
+</p>
+
+<p>
+
+Rather than simply providing pregnancy information, the platform is being designed to help women understand their changing needs, recognise potential warning signs and navigate available healthcare services.
+
+</p>
+
+<p>
+
+Through a combination of digital education, AI-enabled assistance, reminders and healthcare navigation, Raramo seeks to bridge the gap between information and appropriate care-seeking.
+
+</p>
+
+<p>
+
+The platform is envisioned for use through a mobile application, with complementary access through channels such as WhatsApp and SMS to accommodate different levels of digital access.
+
+</p>
+
+</div>
+
+
+<div class="solution-visual">
+
+<div class="solution-item">
+
+<div class="solution-number">1</div>
+
+<div>
+
+<h4>Understand</h4>
+
+<p>Accessible, stage-specific maternal health information.</p>
+
+</div>
+
+</div>
+
+
+<div class="solution-item">
+
+<div class="solution-number">2</div>
+
+<div>
+
+<h4>Stay Informed</h4>
+
+<p>Personalised pregnancy updates and important reminders.</p>
+
+</div>
+
+</div>
+
+
+<div class="solution-item">
+
+<div class="solution-number">3</div>
+
+<div>
+
+<h4>Recognise</h4>
+
+<p>Guidance on maternal danger signs and when to seek care.</p>
+
+</div>
+
+</div>
+
+
+<div class="solution-item">
+
+<div class="solution-number">4</div>
+
+<div>
+
+<h4>Connect</h4>
+
+<p>Navigation towards appropriate healthcare facilities and services.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="section features" id="features">
+
+<div class="container">
+
+<div class="center">
+
+<div class="section-label">THE RARAMO EXPERIENCE</div>
+
+<h2 class="section-title">
+Designed around the needs of women.
+</h2>
+
+<p class="section-description">
+
+The proposed platform brings together essential maternal health support in a simple and accessible experience.
+
+</p>
+
+</div>
+
+
+<div class="features-grid">
+
+
+<div class="feature-card">
+
+<div class="feature-icon">🤖</div>
+
+<h3>AI-Powered Support</h3>
+
+<p>
+
+An AI-enabled maternal health companion designed to help women access understandable pregnancy information, navigate common questions and identify when professional medical attention is necessary.
+
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">📅</div>
+
+<h3>Pregnancy Tracking</h3>
+
+<p>
+
+A personalised pregnancy journey that provides relevant weekly updates, information about maternal changes and guidance on what women can expect at different stages.
+
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">🔔</div>
+
+<h3>Smart Reminders</h3>
+
+<p>
+
+Timely reminders for antenatal appointments, important health checks, medication schedules as advised by healthcare professionals and other pregnancy milestones.
+
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">🚨</div>
+
+<h3>Danger Sign Awareness</h3>
+
+<p>
+
+Accessible education about pregnancy warning signs, helping women understand when symptoms require urgent assessment by a qualified healthcare professional.
+
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">🏥</div>
+
+<h3>Healthcare Referrals</h3>
+
+<p>
+
+A healthcare navigation and referral pathway designed to help women identify suitable healthcare facilities and understand where to seek appropriate care.
+
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">💗</div>
+
+<h3>Emotional Support</h3>
+
+<p>
+
+A more supportive pregnancy experience through reassuring educational content, compassionate communication and opportunities for women to feel heard throughout their journey.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AI -->
+
+<section class="section ai-section">
+
+<div class="container ai-grid">
+
+<div>
+
+<div class="section-label">INTELLIGENT MATERNAL SUPPORT</div>
+
+<h2 class="section-title">
+Making maternal health information more accessible through AI.
+</h2>
+
+<p class="section-description">
+
+Raramo envisions the responsible use of artificial intelligence to make maternal health information easier to access, understand and navigate.
+
+</p>
+
+
+<div class="ai-points">
+
+<div class="ai-point">
+
+<span>✓</span>
+
+<p>Answers to common pregnancy-related questions using reviewed health information.</p>
+
+</div>
+
+<div class="ai-point">
+
+<span>✓</span>
+
+<p>Guidance tailored to the woman's stage of pregnancy.</p>
+
+</div>
+
+<div class="ai-point">
+
+<span>✓</span>
+
+<p>Identification of concerning symptoms that should prompt urgent professional assessment.</p>
+
+</div>
+
+<div class="ai-point">
+
+<span>✓</span>
+
+<p>Support in navigating maternal health services and referral pathways.</p>
+
+</div>
+
+<div class="ai-point">
+
+<span>✓</span>
+
+<p>Accessible communication through simple language and, eventually, local language options.</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="ai-demo">
+
+<div class="ai-demo-header">
+
+<div class="ai-avatar">🤰🏽</div>
+
+<div>
+
+<h3>Meet your Raramo Companion</h3>
+
+<p>Concept demonstration | Not a live AI service</p>
+
+</div>
+
+</div>
+
+
+<div class="chat-message">
+
+Hello! Welcome to Raramo. I'm here to help you explore pregnancy information and maternal health resources.
+
+What would you like to learn about today?
+
+</div>
+
+
+<input
+type="text"
+id="aiQuestion"
+class="chat-input"
+placeholder="Ask a pregnancy-related question..."
+aria-label="Enter a pregnancy question"
+>
+
+<button class="chat-button" onclick="demoAI()">
+
+Explore the concept
+
+</button>
+
+
+<div id="aiResponse" class="chat-message" style="display:none; margin-top:15px;"></div>
+
+
+<p class="ai-disclaimer">
+
+This is a non-clinical website demonstration, not a functioning AI medical assistant. It does not assess symptoms, diagnose conditions or replace professional healthcare.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REFERRAL SYSTEM -->
+
+<section class="section referral">
+
+<div class="container">
+
+<div class="center">
+
+<div class="section-label">BRIDGING THE GAP TO CARE</div>
+
+<h2 class="section-title">
+From information to appropriate healthcare.
+</h2>
+
+<p class="section-description">
+
+Access to information is important. But women also need to know where to go and how to access care when they need it.
+
+</p>
+
+</div>
+
+
+<div class="referral-grid">
+
+
+<div class="referral-box">
+
+<div class="referral-step">
+
+<div class="number">1</div>
+
+<div>
+
+<h4>Identify a Need</h4>
+
+<p>Women receive guidance on when a concern may require professional medical attention.</p>
+
+</div>
+
+</div>
+
+
+<div class="referral-step">
+
+<div class="number">2</div>
+
+<div>
+
+<h4>Find Appropriate Care</h4>
+
+<p>The platform aims to provide information about relevant healthcare facilities and services.</p>
+
+</div>
+
+</div>
+
+
+<div class="referral-step">
+
+<div class="number">3</div>
+
+<div>
+
+<h4>Navigate the Referral</h4>
+
+<p>Women can be guided towards the appropriate facility or healthcare provider.</p>
+
+</div>
+
+</div>
+
+
+<div class="referral-step">
+
+<div class="number">4</div>
+
+<div>
+
+<h4>Stay Connected</h4>
+
+<p>The platform aims to support continued engagement with maternal health information and follow-up.</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="referral-content">
+
+<h2 class="section-title">
+A more connected maternal healthcare experience.
+</h2>
+
+<p>
+
+Raramo's proposed referral and healthcare navigation component recognises that maternal health outcomes depend not only on awareness, but also on the ability to access appropriate services.
+
+</p>
+
+<p>
+
+By connecting women with information about healthcare facilities, available services and appropriate care pathways, Raramo seeks to reduce the distance between recognising a concern and seeking help.
+
+</p>
+
+<p>
+
+The long-term vision is to develop locally relevant healthcare directories and referral partnerships, beginning with the needs and realities of communities in our target markets.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PREGNANCY JOURNEY -->
+
+<section class="section journey">
+
+<div class="container">
+
+<div class="center">
+
+<div class="section-label">BEYOND PREGNANCY</div>
+
+<h2 class="section-title">
+Support throughout the maternal journey.
+</h2>
+
+<p class="section-description">
+
+Raramo recognises that maternal wellbeing is not limited to nine months of pregnancy.
+
+</p>
+
+</div>
+
+
+<div class="journey-grid">
+
+
+<div class="journey-card">
+
+<div class="card-icon">🌱</div>
+
+<h3>Early Pregnancy</h3>
+
+<p>
+
+Accessible information about early pregnancy, antenatal care, expected changes, important appointments and the foundations of a healthy pregnancy journey.
+
+</p>
+
+</div>
+
+
+<div class="journey-card">
+
+<div class="card-icon">🤰🏽</div>
+
+<h3>Throughout Pregnancy</h3>
+
+<p>
+
+Stage-specific educational content, reminders, maternal health guidance, awareness of warning signs and support in navigating healthcare services.
+
+</p>
+
+</div>
+
+
+<div class="journey-card">
+
+<div class="card-icon">👶🏽</div>
+
+<h3>Postpartum</h3>
+
+<p>
+
+Information and support following childbirth, including maternal recovery, postpartum warning signs, breastfeeding education and the transition into motherhood.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VISION -->
+
+<section class="section vision">
+
+<div class="container">
+
+<div class="section-label">OUR VISION</div>
+
+<h2>
+A world where no woman has to navigate pregnancy feeling uninformed, unsupported or alone.
+</h2>
+
+<p>
+
+We envision a future where technology complements healthcare systems, empowers women with knowledge and helps connect communities to the maternal health services they need.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FOUNDER -->
+
+<section class="section founder" id="founder">
+
+<div class="container founder-grid">
+
+
+<div class="founder-photo">
+
+<div class="founder-placeholder">
+
+<span>👩🏽‍⚕️</span>
+
+<p>Founder photograph</p>
+
+</div>
+
+</div>
+
+
+<div class="founder-content">
+
+<div class="section-label">THE PERSON BEHIND RARAMO</div>
+
+<h2 class="founder-name">Amara Chikumbirike</h2>
+
+<div class="founder-role">
+Founder, Raramo Health
+</div>
+
+<p>
+
+Amara Chikumbirike is a medical student, public health advocate and social impact founder passionate about improving health outcomes and expanding opportunities for women and girls.
+
+</p>
+
+<p>
+
+She is currently pursuing a Bachelor of Medicine and Bachelor of Surgery (MBChB) at the University of Lusaka in Zambia. Her medical training has strengthened her interest in the intersection of clinical care, public health and the role of innovation in addressing healthcare challenges.
+
+</p>
+
+<p>
+
+Beyond medical school, Amara is the founder of Girl Up Lusaka, a youth-led initiative focused on menstrual health, girls' education, sexual and reproductive health, mentorship and gender equality. Through this work, she has contributed to initiatives reaching more than 1,000 girls.
+
+</p>
+
+<p>
+
+Her experience in community health advocacy and engagement with underserved communities has shaped her interest in solutions that address the barriers people experience when accessing essential health information and services.
+
+</p>
+
+<p>
+
+Raramo Health reflects her growing interest in digital health and maternal health innovation. She envisions a platform that combines accessible health education, responsible artificial intelligence and healthcare navigation to support women through pregnancy and beyond.
+
+</p>
+
+<p>
+
+Through Raramo, Amara hopes to contribute to a future in which technology strengthens the connection between women, communities and healthcare systems.
+
+</p>
+
+<a href="mailto:chikumbirikeamara@gmail.com" class="btn btn-primary">
+
+Connect with the Founder
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PARTNERSHIPS -->
+
+<section class="section partners">
+
+<div class="container">
+
+<div class="section-label">BUILDING TOGETHER</div>
+
+<h2 class="section-title">
+Better maternal health requires collaboration.
+</h2>
+
+<div class="partner-box">
+
+<p>
+
+Raramo Health is being developed with a vision of collaboration across healthcare, technology, public health and community engagement.
+
+</p>
+
+<p>
+
+We are interested in connecting with healthcare professionals, midwives, maternal health researchers, technology innovators, healthcare institutions, implementation partners and organisations committed to improving maternal health.
+
+</p>
+
+<a href="#contact" class="btn btn-primary">
+
+Explore Partnerships
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+<div class="container">
+
+<div class="section-label">GET IN TOUCH</div>
+
+<h2 class="section-title">
+Let's build a better maternal health experience.
+</h2>
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<p>
+
+Whether you are a healthcare professional, potential collaborator, researcher, organisation or someone interested in the future of maternal health, we would love to hear from you.
+
+</p>
+
+<div class="contact-detail">
+
+✉ Email
+
+<br>
+
+<a href="mailto:chikumbirikeamara@gmail.com">
+
+chikumbirikeamara@gmail.com
+
+</a>
+
+</div>
+
+
+<div class="contact-detail">
+
+🌍 Focus
+
+<br>
+
+Maternal health, digital health and healthcare innovation.
+
+</div>
+
+</div>
+
+
+<form class="contact-form" id="contactForm">
+
+<input
+type="text"
+id="contactName"
+placeholder="Your name"
+required
+>
+
+<input
+type="email"
+id="contactEmail"
+placeholder="Your email address"
+required
+>
+
+<input
+type="text"
+id="contactSubject"
+placeholder="Subject"
+required
+>
+
+<textarea
+id="contactMessage"
+placeholder="Write your message..."
+required
+></textarea>
+
+<button type="submit" class="btn btn-primary">
+
+Send Message
+
+</button>
+
+<p style="font-size:11px;color:#68746d;margin-top:12px;">
+
+Your email application will open to send the message.
+
+</p>
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Raramo Health</h3>
+
+<p>
+
+Supporting women through pregnancy and beyond.
+
+</p>
+
+<p style="margin-top:15px;">
+
+A better journey begins with informed, connected and supported women.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Explore</h4>
+
+<div class="footer-links">
+
+<a href="#about">About Raramo</a>
+
+<a href="#solution">Our Solution</a>
+
+<a href="#features">Our Features</a>
+
+<a href="#founder">Meet the Founder</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h4>Connect</h4>
+
+<div class="footer-links">
+
+<a href="mailto:chikumbirikeamara@gmail.com">Email Us</a>
+
+<a href="#contact">Partnerships</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+
+© <span id="year"></span> Raramo Health. All rights reserved.
+
+</p>
+
+<p style="margin-top:8px;">
+
+Raramo Health is an initiative under development. Information on this website is educational and does not replace professional medical advice, diagnosis or treatment.
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// MOBILE NAVIGATION
+
+const menuToggle = document.getElementById("menuToggle");
+
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+
+    navLinks.classList.toggle("active");
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+
+// FOOTER YEAR
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+// AI CONCEPT DEMONSTRATION
+
+function demoAI() {
+
+    const question =
+    document.getElementById("aiQuestion").value.trim();
+
+    const response =
+    document.getElementById("aiResponse");
+
+    if (!question) {
+
+        response.style.display = "block";
+
+        response.textContent =
+        "Please enter a question to explore this concept.";
+
+        return;
+
+    }
+
+    response.style.display = "block";
+
+    response.textContent =
+    "Thank you for exploring Raramo. This is a prototype demonstration, not a functioning AI assistant. In the planned platform, an AI-enabled companion would provide reviewed, stage-appropriate maternal health information and guide users towards qualified healthcare professionals when appropriate. If you are experiencing a concerning symptom during pregnancy, seek medical assessment rather than relying on an online tool. For an emergency, go to the nearest appropriate healthcare facility immediately.";
+
+}
+
+
+// CONTACT FORM
+
+document.getElementById("contactForm").addEventListener(
+"submit", function(event) {
+
+    event.preventDefault();
+
+    const name =
+    document.getElementById("contactName").value;
+
+    const email =
+    document.getElementById("contactEmail").value;
+
+    const subject =
+    document.getElementById("contactSubject").value;
+
+    const message =
+    document.getElementById("contactMessage").value;
+
+    const body =
+    "Name: " + name +
+    "\nEmail: " + email +
+    "\n\nMessage:\n" + message;
+
+    const mailto =
+    "mailto:chikumbirikeamara@gmail.com" +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+
+    window.location.href = mailto;
+
+});
+
+</script>
+
+</body>
+</html>
